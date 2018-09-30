@@ -1,0 +1,10 @@
+<view class='container'>
+  <top-box text="工作"></top-box>
+  <view class='content-box'>
+    <view class='job-list-item' wx:for="{{jobList}}" wx:key="{{index}}" bindtap='nextTo' data-to-url="{{item.to}}">
+      <view class='job-list-item-l' style='background-image:url({{item.imgputh}})'></view>
+      <view class='job-list-item-r'></view>
+      {{item.title}}
+    </view>
+  </view>
+</view>

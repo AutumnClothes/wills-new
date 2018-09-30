@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-tab": "../../../dist/tab/index",
+    "i-index": "../../../dist/index/index",
+    "i-index-item": "../../../dist/index-item/index",
+    "i-tabs": "../../../dist/tabs/index",
+    "top-box": "../../../dist/topbar/topbar"
+  },
+  "component": true
+}

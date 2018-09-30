@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/clienta/clienta",
+    "pages/clienta/group/group",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/clienta/usertag/usertag",
+    "pages/clienta/realchat/realchat",
+    "pages/clienta/jobs/newmsg/newmsg"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "transfrom",
+    "navigationBarTitleText": "为斯理财",
+    "navigationBarTextStyle": "black"
+  }
+}

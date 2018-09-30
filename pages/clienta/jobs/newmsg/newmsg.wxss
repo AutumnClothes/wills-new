@@ -1,0 +1,4 @@
+/* pages/clienta/jobs/newmsg/newmsg.wxss */
+.group-box{
+  border:1rpx solid red
+}

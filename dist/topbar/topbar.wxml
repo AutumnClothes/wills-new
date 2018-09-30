@@ -1,0 +1,5 @@
+<!--dist/topbar/topbar.wxml-->
+<view class='top-box' style='margin-top:{{topHeight}}rpx'>
+  <view class='back-box' wx:if="{{backBox}}" bindtap='backTo' data-to-delta="{{delta}}"></view>
+  {{text}}
+</view>

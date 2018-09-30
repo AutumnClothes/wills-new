@@ -1,0 +1,28 @@
+.job-list-item{
+  border: 1px solid #ccc;
+  line-height: 1;
+  padding: 20rpx 0;
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+}
+.job-list-item-l{
+  border: 1rpx solid red;
+  float: left;
+  margin: 0 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+.job-list-item-r{
+  border: 1rpx solid red;
+  float: right;
+  margin: 0 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+  /* background-image: url(); */
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}

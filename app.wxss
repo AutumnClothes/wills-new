@@ -1,0 +1,32 @@
+/**app.wxss全局样式**/
+/*@import 'weui.wxss';*/
+
+page{position: absolute;top:0;left: 0;bottom: 0;}
+.container{
+  font-family: "PingFangSC" !important;
+  background: #ffffff;
+  color: #7f8389;
+  height: 100%;
+  width: 100%;
+}
+
+.text-box{
+  font-size: 12rpx;
+}
+.content-box{
+  position: absolute;
+  top:130rpx;
+  width: 100%;
+}
+/*小头像boxt*/
+.portrait-box{
+  display: inline-block;
+  height: 74rpx;
+  width: 74rpx;
+  margin: 18rpx;
+  border-radius: 50%;
+  border:1rpx solid #e5e5e5;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}

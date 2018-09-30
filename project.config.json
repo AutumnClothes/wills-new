@@ -1,0 +1,60 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx19e4f7f16eb03718",
+	"projectname": "MiniProgramH5",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "usertag",
+					"pathName": "pages/clienta/usertag/usertag",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cc",
+					"pathName": "pages/clienta/group/group",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "realchat",
+					"pathName": "pages/clienta/realchat/realchat",
+					"query": ""
+				}
+			]
+		}
+	}
+}

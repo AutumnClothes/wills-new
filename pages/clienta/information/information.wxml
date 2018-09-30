@@ -1,0 +1,62 @@
+<view class='container'>
+  <top-box text="消息" ></top-box>
+    <view class='group-box' style='top:{{groupHeight}}rpx' bindtap='groupTo'>
+      群发
+    </view>
+  <view class='content-box'>
+    <view class='tap-box'>
+      <i-tabs current="{{ current }}" color="#ffac18" bindchange="handleChange" >
+        <i-tab key="chat" title="聊天" data-tab-id="tab1"></i-tab>
+        <i-tab key="dynamic" title="动态" data-tab-id="tab2"></i-tab>
+      </i-tabs>
+    </view>
+    <view style="display:  {{ current == 'chat'? 'block' :  'none' }}" class='chat-box'>
+      <view class='notice'>
+        <view class='bell-box'></view>
+        <view class='notice-text'>刚刚有{{num}}位{{customer}}与您互动</view>
+      </view>
+      <scroll-view 
+        scroll-y
+        style="height: {{scrollHeight}}rpx;"
+        >
+        <view class='linkman-box' wx:for="{{list}}" wx:key="{{index}}" bindtap='toChat'>
+          <view class='linkman-portrait' style='background-image:url({{item.portraitpath}})'></view>
+          <view class='linkman-text'>
+            <view>{{item.name}}</view>
+            <view>{{item.text}}</view>
+          </view>
+          <view class='linkman-time'>
+            {{item.time}}
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view  style="display:  {{ current == 'dynamic'? 'block' :  'none' }}" class='dynamic-box'>
+      <view class='label-box'>
+        <view class='label-itm' 
+        wx:for="{{labelList}}"
+        wx:key="{{index}}"
+        data-label-itm="{{item.name}}"
+        bindtap='labelBind'
+        style="color:{{label == item.name? '#ffa019':'#333'}};background-color:{{label == item.name? '#fff4e6':'#f5f5f5'}}"
+        >
+        {{item.name}}
+        </view>
+        <view class='label-install'></view>
+      </view>
+      <view class='dynamic' wx:for="{{dynamicList}}" wx:key="{{index}}">
+        <view class='dynamic-portrait'></view>
+        <view class='dynamic-portrait-icon'>8</view>
+        <view class='dynamic-time'>
+          {{item.time}}
+        </view>
+        <view class='dynamic-text'>
+          <text>{{item.name}}</text><text style='color:#000'>{{item.action}}</text>
+          <text class='dynamic-text-last'>
+            <text></text>{{item.text}}
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/clienta/usertag/usertag.wxml-->
+<view class='container'>
+  <top-box text="标签" backBox="{{usertag}}" delta="1"></top-box>
+  <view style="box-sizing:border-box;display:{{usertag?'block':'none'}}">
+    <view class='content-box'>
+      <view class="usertag-ul" wx:for="{{tagList}}" wx:key="{{index}}">
+        <view class='usertag-li-f'>
+          {{item.name}}
+          <view class='usertag-li-icon' style='background-color:{{item.color}}'></view>
+        </view>
+        <view class='usertag-li-l' >
+          <view class='usertag-li-v' wx:for="{{item.list}}" wx:for-index="int" wx:key="{{int}}" wx:for-item="ite">{{ite.title}}<text>{{ite.num}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom-box bottom-box-one' bindtap='adminTag'>管理标签</view>
+  </view>
+  <view style="display:{{usertag?'none':'block'}}">
+    <view class='content-box'>
+      <view class="usertag-ul" wx:for="{{tagList}}" wx:key="{{index}}" data-groupid='{{item.id}}' data-name="{{item.name}}">
+        <view class='usertag-li-f'>
+          <view style="float:left" wx:if="{{tagShow}}">{{item.name}}</view>
+          <view wx:else>
+            <input class='alter-input' 
+              style='width:{{inputWidth}}rpx'
+              value="" 
+              bindfocus='bindFocus'
+              bindinput='bindInput'
+              bindtap='inputTap'
+              bindconfirm='inputConfirm'
+              auto-focus
+              />
+          </view>
+          <view class='usertag-li-icon' style='background-color:{{item.color}}'></view>
+          <view class='icon-left' bindtap='alterTagArr' data-show='{{tagShow}}'></view>
+          <view class='icon-right icon-right-one' bindtap=''></view>
+          <view class='icon-right icon-right-del' data-groupid='{{item.id}}' bindtap='deleteTagArr'></view>
+          <view class='icon-right icon-right-add' ></view>
+        </view>
+        <view class="usertag-li-l">
+          <view wx:for="{{item.list}}" wx:for-index="int" wx:key="{{int}}" wx:for-item="ite" data-id="{{ite.id}}" bindtap='tagbind' class="usertag-li-v">{{ite.title}}</view>
+          <view style='clear: none'></view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!usertag}}" bindtap='backTo' class='back-box' style='margin-top:{{top_padding}}rpx'></view>
+    <view class='bottom-box bottom-box-two'>
+      <view bindtap='addTagArr'>添加分组</view>
+      <view bindtap='deleteTag'>删除已选<text>({{tagArrLength}})</text></view>
+    </view>
+  </view>
+</view>
+

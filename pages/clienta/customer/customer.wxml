@@ -1,0 +1,51 @@
+<!--pages/customer/customer.wxml-->
+<view class='container'>
+<top-box text="为斯理财"></top-box>
+  <view class='content-box'>
+    <view class='search-box'>
+      <view class='search'>
+        <icon type='search' size='14'></icon>
+        <input placeholder='按姓名/标签搜索用户' bindinput="inputentry" bindfocus="inputfocus" bindblur="inputblur" bindconfirm="inputconfirm"></input>
+        <view class='label-box' bindtap='nextTo'>
+          <text>标签</text>
+        </view>
+        <view class='label-box-cancel' hidden='{{hidden}}' bindtap='cancelbind'>取消</view>
+      </view>
+    </view>
+    <view class='soulist-box' hidden='{{hidden}}'>
+      <view class='i-index-demo-item'  wx:for="{{souList}}" wx:key="item">
+          <view class='portrait-box' style='background-image:url({{item.portraitpath}});'></view>
+          <rich-text nodes="{{item.nickname}}"></rich-text>
+      </view>
+    </view>
+    <view class='tab-box'>
+      <i-tabs current="{{ current }}" color="#ff9900" bindchange="handleChange" >
+        <i-tab key="tab1" title="存量客户" data-tab-id="tab1"></i-tab>
+        <i-tab key="tab2" title="潜在客户" data-tab-id="tab2"></i-tab>
+      </i-tabs>
+    </view>
+    <view class="i-index-demo" style='height:100%'>
+      <i-index height="100%" bind:change="onChange">
+        <i-index-item 
+            wx:for="{{ indexList }}" 
+            wx:for-index="index" 
+            wx:key="{{index}}" 
+            wx:for-item="item" name="{{item.key}}">
+            <view style='padding-left:20rpx'>
+              <view 
+                class="i-index-demo-item" 
+                wx:for="{{item.list}}" 
+                wx:for-index="in" 
+                wx:key="{{in}}" 
+                wx:for-item="it"
+								data-id='{{it.id}}' data-name='{{it.name}}' data-portraitpath='{{it.portraitpath}}'
+                bindtap='toChat'>
+                <view  class='portrait-box' style='background-image:url({{it.portraitpath}})'></view>
+                  {{it.name}}
+              </view>
+            </view>
+        </i-index-item>
+      </i-index>
+    </view>
+  </view>
+</view>

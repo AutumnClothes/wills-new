@@ -1,0 +1,23 @@
+/* dist/topbar/topbar.wxss */
+.top-box{
+  position: fixed;
+  top:0;
+  font-size: 37rpx;
+  font-family: "PingFangSC";
+  width:100%;
+  text-align: center;
+  background: #fff;
+  color:#38383c;
+}
+/*返回按钮.css*/
+.back-box{
+  position: fixed;
+  float: left;
+  width:37rpx;
+  height: 37rpx;
+  margin-left:20rpx;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 20% 100%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAA9ElEQVRIia3WsQ3CMBCF4R9SZQKaiAJlBIoUKVNkiki0LJDUNMAGTJARqBjFYpMIKkuRZTv22Veepa853+ntmqYlsSbgDjz7vpuKqjrmwABapb7lPhOma5SCNgxgloBODBhiQS/W990SA25iAKFgEBYKBmMhoBcDFvPBB0ZjPlCEuUAxZgOTMBNMxtZgFkyD2TAN2rAFuMRiGnxZ+gVwi8U0eHWgI/CQgL+cqJ5yNnT9D7Og5qYko7ZdTkJd10aM+u6hCN262NFoaBR5AwfgbPRbpb5lXZ8+sWAwGhuWNlFJ+vKi0jjnRKXpyzV9UfpyoTMw/AErtm3jKLH5QAAAAABJRU5ErkJggg==)
+}

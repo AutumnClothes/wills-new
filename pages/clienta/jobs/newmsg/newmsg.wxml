@@ -1,0 +1,7 @@
+<!--pages/clienta/jobs/newmsg/newmsg.wxml-->
+<view class='container'>
+  <top-box text="资讯" backBox="true" delta="1"></top-box>
+  <view class='content-box'>
+
+  </view>
+</view>

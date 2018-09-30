@@ -1,0 +1,3 @@
+.i-index-item-header{height:44rpx;line-height:44rpx;background:#f0f1f6;font-size:28rpx;padding-left:10px;width:100%;box-sizing:border-box;color: black}
+.i-index-item-header-false{height:44rpx;line-height:44rpx;background:#f0f1f6;font-size:28rpx;padding-left:10px;width:100%;box-sizing:border-box;color:red}
+.i-index-item-content{font-size:1em;color:#000} 

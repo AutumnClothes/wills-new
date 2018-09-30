@@ -1,0 +1,14 @@
+<view>
+  <tabone style="display:  {{ current == 'information'? 'block' :  'none' }}" tab1="{{taboneKey}}" id="tabone"></tabone>
+  <tabtwo style="display:  {{ current == 'customer'? 'block' :  'none' }}" tab2="{{tabtwoKey}}" id="tabtwo" ></tabtwo>
+  <tabthree style="display:  {{ current == 'jobs'? 'block' :  'none' }}" tab3="{{tabthreeKey}}" id="tabthree"></tabthree>
+  <tabfour style="display:  {{ current == 'mine'? 'block' :  'none' }}" tab4="{{tabfourKey}}" id="tabfour" ></tabfour>
+  <view class='tabbar-box'>
+    <i-tab-bar current="{{ current }}" bindchange="handleChange">
+      <i-tab-bar-item key="information" img="icon/information.png" current-img="icon/information-btn.png" title="消息"></i-tab-bar-item>
+      <i-tab-bar-item key="customer" img="icon/customer.png" current-img="icon/customer-btn.png" title="联系人"></i-tab-bar-item>
+      <i-tab-bar-item key="jobs" img="icon/jobs.png" current-img="icon/jobs-btn.png" title="工作"></i-tab-bar-item>
+      <i-tab-bar-item key="mine" img="icon/mine.png" current-img="icon/mine-btn.png" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
+</view>

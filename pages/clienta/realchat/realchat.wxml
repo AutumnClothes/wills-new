@@ -1,0 +1,48 @@
+<!--pages/clienta/realchat/realchat.wxml-->
+<view>
+  <view class='top-box'>
+    <view class='back-box' bindtap='backTo'></view>
+    {{target}}
+  </view>
+  <scroll-view 
+    scroll-y
+    style='height:{{scrollBottom}}rpx'
+    scroll-into-view="{{chrildId}}"
+    >
+    <view class='news-box'>
+      <view class='self-portrait' style='background-img:url({{selfPortrait}})'>1</view>
+      <view class='news-one'>
+        <view class='new-one-img' style='background-image:{{oneimgputh}}'></view>
+        <view class='new-one-content'>{{onecontent}}</view>
+        <view class='new-one-time'>{{onetime}}</view>
+      </view>
+    </view>
+    <view class='news-box'>
+      <view class='self-portrait' style='background-img:url({{selfPortrait}})'>2</view>
+      <view class='news-two'>
+        {{content}}
+      </view>
+    </view>
+    <view class='news-box'>
+      <view class='target-portrait' style='background-img:url({{targetPortrait}})'>3</view>
+      <view class='target-news'>
+        {{content2}}
+      </view>
+    </view>
+    <view class='news-time'>23:00</view>
+  </scroll-view>
+  <view class='input-bottom' style='bottom:{{inputBottom}}px'>
+    <view style='float:left' class='input-bottom-left'></view>
+    <view style='float:left' class='input-bottom-center'>
+    <input adjust-position="{{false}}" bindfocus="inputOn" bindblur="inputOut" ></input>
+    </view>
+    <view style='float:right'class='input-bottom-right' bindtouchstart='extendBind'></view>
+  </view>
+  <view class='input-extend' style="display:  {{ extendHid ? 'block' :  'none' }}" >
+    <view class='input-extend-item' wx:for="{{inputExtend}}" wx:key="{{index}}">
+      <view class='input-extend-icon' 
+      style="background-image:url({{item.img}});"></view>
+     {{item.text}}
+    </view>
+  </view>
+</view>
